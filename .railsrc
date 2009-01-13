@@ -1,0 +1,8 @@
+IRB.conf[:IRB_RC] = Proc.new do
+  # Log to STDOUT  
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+
+  # Aliases
+  alias :r! :reload!
+end
+
